@@ -5,13 +5,13 @@
   <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" />
 </p>
 
-# 🤖 Smart Resume Screening System
+# Smart Resume Screening System
 
 > An AI-powered backend system that intelligently matches resumes against job descriptions using NLP and Machine Learning — built for recruiters, HR teams, and developers exploring AI in hiring.
 
 ---
 
-## 📋 Overview
+## Overview
 
 The **Smart Resume Screening System** automates the tedious process of manually reviewing resumes. Upload a job description and one or more resumes, and the system will:
 
@@ -25,22 +25,22 @@ This project demonstrates production-style Python backend development with clean
 
 ---
 
-## ✨ Features
+## Features
 
 | Feature | Description |
 |---------|-------------|
-| 📄 Multi-format Parsing | Supports PDF, DOCX, and TXT resume uploads |
-| 🧠 AI-Powered Matching | TF-IDF Vectorization + Cosine Similarity scoring |
-| 🎯 Skill Extraction | Identifies 60+ technical and soft skills |
-| 📊 Match Scoring | Weighted score (0–100) combining text similarity and skill overlap |
-| 📝 Explanations | Auto-generated human-readable match summaries |
-| 🏆 Resume Ranking | Upload multiple resumes and get ranked results |
-| 🔒 Input Validation | File type checks, empty file handling, error responses |
-| 📖 Swagger Docs | Interactive API documentation out of the box |
+| Multi-format Parsing | Supports PDF, DOCX, and TXT resume uploads |
+| AI-Powered Matching | TF-IDF Vectorization + Cosine Similarity scoring |
+| Skill Extraction | Identifies 60+ technical and soft skills |
+| Match Scoring | Weighted score (0–100) combining text similarity and skill overlap |
+| Explanations | Auto-generated human-readable match summaries |
+| Resume Ranking | Upload multiple resumes and get ranked results |
+| Input Validation | File type checks, empty file handling, error responses |
+| Swagger Docs | Interactive API documentation out of the box |
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 | Layer | Technology |
 |-------|-----------|
@@ -54,7 +54,7 @@ This project demonstrates production-style Python backend development with clean
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 smart_resume_screening/
@@ -76,7 +76,7 @@ smart_resume_screening/
 
 ---
 
-## 🚀 Installation & Setup
+## Installation & Setup
 
 ### Prerequisites
 
@@ -106,13 +106,9 @@ pip install -r requirements.txt
 uvicorn app.main:app --reload --host 127.0.0.1 --port 8000
 ```
 
-🎉 The API is now live at **http://localhost:8000**
-
-📖 Interactive docs at **http://localhost:8000/docs**
-
 ---
 
-## 📡 API Endpoints
+## API Endpoints
 
 ### `GET /` — Health Check
 
@@ -135,8 +131,8 @@ Match one resume against a job description.
 
 | Field | Type | Required | Description |
 |-------|------|----------|-------------|
-| `job_description` | string | ✅ | The job description text |
-| `resume` | file | ✅ | Resume file (.pdf, .docx, or .txt) |
+| `job_description` | string | Yes | The job description text |
+| `resume` | file | Yes | Resume file (.pdf, .docx, or .txt) |
 
 ---
 
@@ -148,12 +144,12 @@ Upload multiple resumes and get ranked results.
 
 | Field | Type | Required | Description |
 |-------|------|----------|-------------|
-| `job_description` | string | ✅ | The job description text |
-| `resumes` | file[] | ✅ | One or more resume files |
+| `job_description` | string | Yes | The job description text |
+| `resumes` | file[] | Yes | One or more resume files |
 
 ---
 
-## 💡 Example Request & Response
+## Example Request & Response
 
 ### cURL Request
 
@@ -195,27 +191,21 @@ print(response.json())
 
 ---
 
-## 📸 Screenshots
+## Screenshots
 
-> Add screenshots of your running application here.
-
-| Swagger UI | API Response |
-|------------|-------------|
-| ![Swagger Docs](screenshots/swagger_ui.png) | ![API Response](screenshots/api_response.png) |
-
-<details>
-<summary>📌 How to add screenshots</summary>
-
-1. Create a `screenshots/` folder in the project root
-2. Take screenshots of the Swagger UI and API responses
-3. Save them as `swagger_ui.png` and `api_response.png`
-4. The images will render automatically in this README
-
-</details>
+![Screenshot 1](screenshots/Screenshot%20(1814).png)
 
 ---
 
-## 🧮 How Scoring Works
+![Screenshot 2](screenshots/Screenshot%20(1815).png)
+
+---
+
+![Screenshot 3](screenshots/Screenshot%20(1816).png)
+
+---
+
+## How Scoring Works
 
 The match score combines two signals:
 
@@ -232,7 +222,7 @@ This blended approach ensures both contextual relevance and specific keyword cov
 
 ---
 
-## 🔮 Future Improvements
+## Future Improvements
 
 - [ ] **Sentence Transformers** — Use BERT/SBERT embeddings for deeper semantic matching
 - [ ] **Experience Extraction** — Parse years of experience from resumes
@@ -245,7 +235,7 @@ This blended approach ensures both contextual relevance and specific keyword cov
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 Contributions are welcome! Feel free to:
 
@@ -257,21 +247,12 @@ Contributions are welcome! Feel free to:
 
 ---
 
-## 👤 Author
-
-**Your Name**
-
-- GitHub: [@YOUR_USERNAME](https://github.com/YOUR_USERNAME)
-- LinkedIn: [Your LinkedIn](https://linkedin.com/in/YOUR_PROFILE)
-
----
-
-## 📄 License
+## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ---
 
 <p align="center">
-  <b>⭐ If you found this project useful, give it a star on GitHub!</b>
+  <b>If you found this project useful, give it a star on GitHub!</b>
 </p>
